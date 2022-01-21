@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-I am Matt and I am excited for any conflict : )
+I am Felix and I am excited to receive a conflict!?!
 	
 ## Technologies
 Technologies used for this project:
