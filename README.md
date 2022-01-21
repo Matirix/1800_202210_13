@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-I am Felix and I am excited to receive a conflict!?!
+I am Matt and I am excited for any conflict : )
 	
 ## Technologies
 Technologies used for this project:
@@ -27,7 +27,7 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /blah.jpg                #  
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
