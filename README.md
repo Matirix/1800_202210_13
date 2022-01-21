@@ -6,8 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-I am Felix and I am excited to receive a conflict!?!
-	
+I am Felix and I am excited to receive a conflict!?! 
+	Hello, This is Felix, doign a test. 
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
