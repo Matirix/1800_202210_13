@@ -7,8 +7,8 @@
 ## General Info
 This browser based web application to ...
 I am Felix and I am excited to receive a conflict!?! 
-I am Set and i like bubbletea
-	
+I am Set and i like bubbletea. 
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
