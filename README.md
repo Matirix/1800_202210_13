@@ -6,7 +6,12 @@
 
 ## General Info
 This browser based web application to ...
+<<<<<<< HEAD
 I am Matt and I am excited for any conflict : )
+=======
+I am Felix and I am excited to receive a conflict!?! 
+I am Set and i like bubbletea
+>>>>>>> 5f53a0f6c421bd9dc1de8e7f990c5efd725e50f4
 	
 ## Technologies
 Technologies used for this project:
