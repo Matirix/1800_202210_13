@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+I am Matt and I am excited for any conflict : )
 	
 ## Technologies
 Technologies used for this project:
