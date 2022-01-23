@@ -1,4 +1,4 @@
-
+/*STYLE CSS*/
 
 /*Drop down button; Set, replace with an icon of a button*/
 .drpbtn {
@@ -10,12 +10,13 @@
     margin:16px;
 }
 
+/*Drop down itself*/
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-
+/*content of dropdown*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -25,13 +26,14 @@
     z-index: 1;
 
 }
+/*Refers to the actual links of the drop down*/
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
+/*What happens when you hover on it*/
 dropdown-content a:hover {
     background-color: #ddd;
 
@@ -44,6 +46,10 @@ dropdown-content a:hover {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+
+
+
 
 
 /*Navigation bar*/
@@ -69,5 +75,5 @@ dropdown-content a:hover {
 #navbar a:hover{
     background-color:gray;
     color:yellow;
-    font-size:
+    font-size:15px;
 }
