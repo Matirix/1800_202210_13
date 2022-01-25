@@ -32,6 +32,25 @@
         </div>
     </div> 
 
+    <!-- script block to have the navigation bar disappear/inherited from ln23. -->
+    <!-- 2 variables declared with Y position of the page. -->
+    <!-- Compare pixel values, if false, then the navbar will dispsapear.-->
+    <!-- Note, you can mess around with px values for better understanding. -->
+    <script type="text/javascript">
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                
+            var currentScrollpos = window.pageYOffset
+            if(prevScrollpos >= currentScrollpos) {
+                document.getElementById("navbar").style.top = "0px";
+                }
+                else {
+                    document.getElementById("navbar").style.top = '-30px';
+                }
+                prevScrollpos = currentScrollpos; 
+            }
+    </script>
+
 
 </body>
 
