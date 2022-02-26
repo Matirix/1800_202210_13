@@ -1,1 +1,23 @@
 
+/*-------------------------------------
+ * customize material design icon sizes 
+ *-------------------------------------
+ */
+/* why isn't it linking properly */
+ .spotlight {
+     text-decoration: none;
+     text-align: center;
+ }
+ .navhov:hover {
+     text-decoration: none;
+     background-color: #f1f1f1;
+     border-radius: 10%;
+ }
+
+
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
