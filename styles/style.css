@@ -4,10 +4,25 @@
  *-------------------------------------
  */
     /* why isn't it linking properly */
- .spotlight {
-     text-decoration: none;
+a{
+    text-decoration: none;
+
+}
+#navbar_title {
+    text-align: center;
+    color: #f1f1f1;
+
+}
+ h1{
      text-align: center;
  }
+
+ body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+ }
+ 
  .navhov:hover {
      text-decoration: none;
      background-color: #f1f1f1;
@@ -29,11 +44,27 @@
 }
 
 #video {
-
     width: 100%;
 
 }
 
+.icons {
+    text-align: center;
+    width: 24%;
+    padding-top: 25px;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; } 
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
 @media all and (max-width: 600px) {
     #video {
         width: 100%;    
@@ -43,8 +74,3 @@
     }
 
 }
-
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
