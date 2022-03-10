@@ -43,7 +43,6 @@ body {
  /* card group sizing. */
  .card-group img {
     height: 250px;  
-    width: 250px;
  }
  
  .navhov:hover {
