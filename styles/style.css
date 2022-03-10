@@ -27,9 +27,9 @@ button, input[type="submit"], input[type="reset"] {
 
 #side {
     width: 5%;
-
-
 }
+
+
 h1{
      text-align: center;
  }
@@ -38,6 +38,12 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
+ }
+
+ /* card group sizing. */
+ .card-group img {
+    height: 250px;  
+    width: 250px;
  }
  
  .navhov:hover {
@@ -82,6 +88,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* media query */
 @media all and (max-width: 600px) {
     #video {
         width: 100%;    
