@@ -40,7 +40,7 @@ function videos_4() {
 }  
 
 
-//annotated 
+//To display video 
 function display_video(){
     // console.log("inside the function")
     //get into the right collection
