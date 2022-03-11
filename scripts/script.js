@@ -40,11 +40,7 @@ function videos_4() {
 }  
 
 
-<<<<<<< HEAD
 //To display video 
-=======
-// //annotated 
->>>>>>> 3325c67250cb4b2578e53a494e82d41d3d104013
 function display_video(){
     // console.log("inside the function")
     //get into the right collection
