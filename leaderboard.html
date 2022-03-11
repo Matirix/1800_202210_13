@@ -2,167 +2,193 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="comp1800 template" content="My 1800 App">
+  <title>My BCIT Project</title>
+  <meta name="comp1800 template" content="My 1800 App">
 
-    <!------------------------>
-    <!-- Required meta tags -->
-    <!------------------------>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> 
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    <!-- We require ln33 for the buttons to drop down and collapse. -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <!-- We require ln33 for the buttons to drop down and collapse. -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
-    <!-- Style sheet -->
-    <link rel="stylesheet" href="./styles/style.css">
-     <!-- Not of best practice, but implemented none-type bullet pts.--> 
-    <style>
-        li {
-            list-style-type: none;
-        }
-        /* Curved edges. */
-        .card {
-            border-radius: 20px;
-            text-align: left;
+  <!-- Style sheet -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- Not of best practice, but implemented none-type bullet pts.-->
+  <style>
+    li {
+      list-style-type: none;
+    }
 
-        }
-    </style>
+    /* Curved edges. */
+    .card {
+      border-radius: 20px;
+      text-align: left;
+
+    }
+  </style>
 
 </head>
 
 <body>
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
 
-    <!-- our own navbar goes here -->
-    <!-- This navbar is on everypage. Don't touch, we'll talk about it tomorrow -->
-    <nav id="navbarPlaceholder"></nav>
+  <!-- our own navbar goes here -->
+  <!-- This navbar is on everypage. Don't touch, we'll talk about it tomorrow -->
+  <nav id="navbarPlaceholder"></nav>
 
-    <!-- the body of your page goes here -->
-    <!-- This is the part that you do edit. I'll create a sperate style sheet that links to this directly -->
-    <div class="container-fluid bg-light text-dark p-5">
-        <div class="container bg-light p-5">
-            <h1 class="display-4 title">Leaderboards</h1>
-            <hr>
-        </div>
-        <!-- <div class="buttons"> -->
-            <div id="accordion">
-                <!-- Card 1 -->
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <!--data-toggle When button is clicked, it'll trigger collapse function. -->
-                        <!--data-target is specifying the element of the div so #collapseOne to help close content. -->
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Countries/Medals 
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        Empty Box! 
-                        <li> Countries</li>
-                        <li> Germany</li>
-                        <li> Norway</li>
-                        <li> Sweden</li>
-                        <li> Netherlands</li>
-                        <li> China</li>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <!-- Card 2  -->
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Countries/Medals
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        Empty Box! 
-                        <li> Countries</li>
-                        <li> Germany</li>
-                        <li> Norway</li>
-                        <li> Sweden</li>
-                        <li> Netherlands</li>
-                        <li> China</li>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <!-- Card 3  -->
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Countries/Medals
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        <li> Countries</li>
-                        <li> Germany</li>
-                        <li> Norway</li>
-                        <li> Sweden</li>
-                        <li> Netherlands</li>
-                        <li> China</li>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <!-- Card 4  -->
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                      <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Countries/Medals
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                      <div class="card-body">
-                          <li> Countries</li>
-                          <li> Germany</li>
-                          <li> Norway</li>
-                          <li> Sweden</li>
-                          <li> Netherlands</li>
-                          <li> China</li>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        <!-- </div> -->
+  <!-- the body of your page goes here -->
+  <!-- This is the part that you do edit. I'll create a sperate style sheet that links to this directly -->
+  <div class="container-fluid bg-light text-dark p-5">
+    <div class="container bg-light p-5">
+      <h1 class="display-4 title">Leaderboards</h1>
+      <hr>
     </div>
+    <!-- <div class="buttons"> -->
+    <div id="accordion">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <!--data-toggle When button is clicked, it'll trigger collapse function. -->
+            <!--data-target is specifying the element of the div so #collapseOne to help close content. -->
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Countries/Medals
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <!-- <li> Countries</li>
+            <li> Germany</li>
+            <li> Norway</li>
+            <li> Sweden</li>
+            <li> Netherlands</li>
+            <li> China</li> -->
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Card 2  -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Countries/Medals
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <!-- <li> Countries</li>
+            <li> Germany</li>
+            <li> Norway</li>
+            <li> Sweden</li>
+            <li> Netherlands</li>
+            <li> China</li> -->
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Card 3  -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Countries/Medals
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <!-- <li> Countries</li>
+            <li> Germany</li>
+            <li> Norway</li>
+            <li> Sweden</li>
+            <li> Netherlands</li>
+            <li> China</li> -->
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Card 4  -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              Countries/Medals
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            <!-- <li> Countries</li>
+            <li> Germany</li>
+            <li> Norway</li>
+            <li> Sweden</li>
+            <li> Netherlands</li>
+            <li> China</li> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="container">
+    <h1>Current Leaderboard Placements</h1>
+
+    <div class="container">
+        <div id="Leaderboard-go-here" class="row row-cols-auto">
+        </div>
+    </div>
+</div>
+  <template id="leaderboardCardTemplate">
+    <div class="card py-2 mx-2" style="width: 18rem;">
+        <img class="card-image card-img-top" src=" ..." alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-attend"></p>
+            <p> Total Medals: <span class="total"></span><span>,</span>
+            <p> Gold Medals: <span class="g"></span> </p>
+            <p> Silver Medals: <span class="s"></span></p>
+            <p> Bronze Medals: <span class="b"></span></p>
+            <p> Bronze Medals: <span class="p"></span></p>
+            <a class="btn btn-primary card-href">Get Details</a>
+        </div>
+    </div>
+</template>
 
 
 
@@ -175,16 +201,16 @@
 
 
 
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
+  <!-- our own footer goes here-->
+  <nav id="footerPlaceholder"></nav>
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_Team13.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
-
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_Team13.js"></script>
+  <script src="./scripts/skeleton.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/leaderboard.js"></script>
 </body>
 
 </html>
