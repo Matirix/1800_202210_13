@@ -21,7 +21,7 @@
 //     }
 //     $("#video").html(the_video);
 // }   
-
+//Functions for each video
 function videos_1() {
     $("#video").html("<iframe width='1200' height='534' src='https://www.youtube.com/embed/RjKNbfA64EE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
     )
@@ -38,6 +38,25 @@ function videos_4() {
     $("#video").html("<iframe width='1200' height='534' src='https://www.youtube.com/embed/py6MgBsXjYc?list=RDGMEMhCgTQvcskbGUxqI4Sn2QYw' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
     )
 }  
+
+
+//annotated 
+function display_video(){
+    // console.log("inside the function")
+    //get into the right collection
+    //database of this collection (quotes).document. << You still need to access the document which is down below
+    db.collection("frontvideo").doc("sports1")
+    .onSnapshot(function(video_1) {
+        //console.log(tuesdayDoc.data());
+        document.getElementById("anotherone").innerHTML=video_1.data().video; //quote is the access to database
+        //Grab the ID of where you want to display the content of the database.
+        //syntax: doc.get("ID").innerhtml = callback function.data().key
+
+    })
+}
+
+
+
 
 
 function setup() {
@@ -57,6 +76,7 @@ function setup() {
     // $(".sports").click(function (){
     //     videos(this.id);
     // })
+    display_video();
 }
 
 jQuery(document).ready(setup);

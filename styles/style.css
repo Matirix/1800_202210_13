@@ -20,6 +20,27 @@ a{
 
 }
 
+.schedule {
+    width: 100%;
+    /* border: black solid 0.5cm; */
+    /* table-layout: fixed; */
+
+}
+
+td {
+    border: black solid 1px;
+    table-layout: fixed;
+    width: 200px;
+    height: 100px;
+}
+
+tr {
+    border: red solid 1px;
+}
+#logo {
+    size: 1em;
+}
+
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -107,6 +128,20 @@ footer {
     }
     .video1{
         width: 100%;
+    
+    }
+    td {
+        width: 100%;
+        display: hidden;
+        table-layout: auto;
+
+
+    }
+    .schedule{
+        width: 100%;
+        table-layout: auto;
+        display: hidden;
+
     }
 
 }
