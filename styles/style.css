@@ -1,18 +1,128 @@
-
 /*-------------------------------------
  * customize material design icon sizes 
  *-------------------------------------
  */
-    /* why isn't it linking properly */
+/* why isn't it linking properly */
+/* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+      } */
 
-*{
-    box-sizing: border-box;
-    margin: 0;
+html {
+    font-size: 62.5%;
 }
-a{
+
+.container1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    height: 100%;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 80rem;
+    height: 52rem;
+    background-color: #5385e2;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+    width: 100%;
+    height: 12rem;
+    background-color: #bf85ee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month p {
+    font-size: 1.6rem;
+}
+
+.weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    color: aquamarine;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(79.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div {
+    color: #eee;
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(75.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.4s;
+}
+
+.days div:hover:not(.today) {
+    background-color: #8ba0bd;
+    border: 0.2rem solid rgb(228, 228, 228);
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #64b8c4;
+}
+
+a {
     text-decoration: none;
 
 }
+
 #navbar_title {
     text-align: center;
     color: #f1f1f1;
@@ -37,18 +147,21 @@ td {
 tr {
     border: red solid 1px;
 }
+
 #logo {
     size: 1em;
 }
 
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 #side {
@@ -56,37 +169,39 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 
-h1{
-     text-align: center;
- }
+h1 {
+    text-align: center;
+}
 
 body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
- }
+}
 
- /* card group sizing. */
- .card-group img {
-    height: 250px;  
- }
+/* card group sizing. */
+.card-group img {
+    height: 250px;
+}
 
- /* Table borders w/ some light padding */
-td{
+/* Table borders w/ some light padding */
+td {
     border: solid black 2px;
     width: 15%;
     padding: 2em;
 }
- 
- .navhov:hover {
-     text-decoration: none;
-     background-color: #f1f1f1;
-     border-radius: 10%;
- }
-.title{
+
+.navhov:hover {
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+}
+
+.title {
     text-align: center;
     background-color: #f1f1f1;
 }
+
 .buttons {
     text-align: center;
     border-radius: 10px;
@@ -109,10 +224,21 @@ td{
     padding-top: 25px;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; } 
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
 
 footer {
     position: fixed;
@@ -124,12 +250,14 @@ footer {
 /* media query */
 @media all and (max-width: 600px) {
     #video {
-        width: 100%;    
-    }
-    .video1{
         width: 100%;
-    
     }
+
+    .video1 {
+        width: 100%;
+
+    }
+
     td {
         width: 100%;
         display: hidden;
@@ -137,7 +265,8 @@ footer {
 
 
     }
-    .schedule{
+
+    .schedule {
         width: 100%;
         table-layout: auto;
         display: hidden;

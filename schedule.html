@@ -35,7 +35,17 @@
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="./styles/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
@@ -45,160 +55,30 @@
 
     <!-- our own navbar goes here -->
     <nav id="navbarPlaceholder"></nav>
-
-    <!-- the body of your page goes here -->
-    <!-- stuff -->
-    <div class="container-fluid bg-light text-dark p-5">
-        <div class="container bg-light p-5">
-            <h1 class="display-4 title">Schedule</h1>
-            <hr>
-            <!-- Table inside schedule container. -->
-            <div class="container-fluid bg-light text-dark">
-                <div class="container bg-light p-5">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    First Day
-                                </td>
-                                <td>
-                                    Second Day
-                                </td>
-                                <td>
-                                    Third Day
-                                </td>
-                                <td>
-                                    Fourth Day
-                                </td>
-                                <td>
-                                    Fifth Day
-                                </td>
-                                <td>
-                                    Sixth Day
-                                </td>
-                                <td>
-                                    Seventh Day
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- Table 2  -->
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    First Day
-                                </td>
-                                <td>
-                                    Second Day
-                                </td>
-                                <td>
-                                    Third Day
-                                </td>
-                                <td>
-                                    Fourth Day
-                                </td>
-                                <td>
-                                    Fifth Day
-                                </td>
-                                <td>
-                                    Sixth Day
-                                </td>
-                                <td>
-                                    Seventh Day
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- Table 3  -->
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    First Day
-                                </td>
-                                <td>
-                                    Second Day
-                                </td>
-                                <td>
-                                    Third Day
-                                </td>
-                                <td>
-                                    Fourth Day
-                                </td>
-                                <td>
-                                    Fifth Day
-                                </td>
-                                <td>
-                                    Sixth Day
-                                </td>
-                                <td>
-                                    Seventh Day
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- Table 4  -->
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    First Day
-                                </td>
-                                <td>
-                                    Second Day
-                                </td>
-                                <td>
-                                    Third Day
-                                </td>
-                                <td>
-                                    Fourth Day
-                                </td>
-                                <td>
-                                    Fifth Day
-                                </td>
-                                <td>
-                                    Sixth Day
-                                </td>
-                                <td>
-                                    Seventh Day
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- Table 5 -->
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    First Day
-                                </td>
-                                <td>
-                                    Second Day
-                                </td>
-                                <td>
-                                    Third Day
-                                </td>
-                                <td>
-                                    Fourth Day
-                                </td>
-                                <td>
-                                    Fifth Day
-                                </td>
-                                <td>
-                                    Sixth Day
-                                </td>
-                                <td>
-                                    Seventh Day
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <h1 class="display-4 title">Schedule</h1>
+    <hr>
+    <div class="container1" style="overflow: hidden;">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
             </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
         </div>
-    </div>
-
+      </div>
     <hr>
 
     <!-- <div class="container-fluid bg-light text-dark p-5">
@@ -238,16 +118,16 @@
     </div> -->
 
     <div class="container">
-        <h1>Some popular hikes</h1>
-    
+        <h1>Upcomingh Events</h1>
+
         <div class="container">
             <div id="upcoming_events-go-here" class="row row-cols-auto">
             </div>
         </div>
     </div>
-    
+
     <template id="hikeCardTemplate">
-        <div class="card py-2 mx-2" style="width: 18rem;">
+        <div class="card py-2 mx-2" style="width: 30%; overflow: hidden;">
             <img class="card-image card-img-top" src=" ..." alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -269,7 +149,7 @@
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_Team13.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <!-- <script src="./scripts/schedule.js"></script> -->
+    <script src="./scripts/schedule.js"></script>
     <script src="./scripts/script.js"></script>
 
 </body>
