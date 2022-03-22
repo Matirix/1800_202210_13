@@ -137,7 +137,7 @@ a {
 
 }
 
-td {
+/* td {
     border: black solid 1px;
     table-layout: fixed;
     width: 200px;
@@ -146,11 +146,19 @@ td {
 
 tr {
     border: red solid 1px;
-}
+} */
 
 #logo {
     size: 1em;
 }
+
+
+/* For the comment section */
+#description {
+    border-radius: 5%;
+}
+
+
 
 button,
 input[type="submit"],
