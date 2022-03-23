@@ -31,6 +31,7 @@ function writeleaders() {
     });
 }
 function displayCards(collection) {
+    // get the elements from HTML, store it in cardTemplate
     let cardTemplate = document.getElementById("leaderboardCardTemplate");
 
     db.collection(collection).get()
@@ -69,3 +70,18 @@ function displayCards(collection) {
         })
 }
 displayCards("Leaderboard")
+
+
+// Read the database and populate data over id tags.
+// May currently be the least efficient. 
+function read_card_contents() {
+    db.collection("Leaderboard").doc("3VrTBSfP3Cy5U9g2Qjzx")
+        .onSnapshot(function (chinaDoc) {
+            document.getElementById("total").innerHTML = chinaDoc.data().Total_medals;
+            document.getElementById("g").innerHTML = chinaDoc.data().Gold_medals;
+            document.getElementById("s").innerHTML = chinaDoc.data().Silver_medals;
+            document.getElementById("b").innerHTML = chinaDoc.data().Bronze_medals;
+            document.getElementById("p").innerHTML = chinaDoc.data().placement;
+        })
+}
+read_card_contents();
