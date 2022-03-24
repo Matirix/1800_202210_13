@@ -1,8 +1,8 @@
 function writeleaders() {
     //define a variable for the collection you want to create in Firestore to populate data
-    var hikesRef = db.collection("Leaderboard");
+    var sportsRef = db.collection("Leaderboard");
 
-    hikesRef.add({
+    sportsRef.add({
         Country: "China",
         Sport: "Downhill Skiing", //replace with your own city?
         Total_medals: "20",
@@ -11,18 +11,18 @@ function writeleaders() {
         Bronze_medals: "5",
         placement: "second"
     });
-    hikesRef.add({
+    sportsRef.add({
         Country: "Germany",
-        Sport: "Downhill Skiing", //replace with your own city?
+        Sport: "Downhill Skiing", 
         Total_medals: "18",
         Gold_medals: "8",
         Silver_medals: "5",
         Bronze_medals: "5",
         placement: "third"
     });
-    hikesRef.add({
+    sportsRef.add({
         Country: "Canada",
-        Sport: "Downhill Skiing", //replace with your own city?
+        Sport: "Downhill Skiing",
         Total_medals: "17",
         Gold_medals: "7",
         Silver_medals: "5",
@@ -30,9 +30,9 @@ function writeleaders() {
         placement: "fourth"
     });
 
-    hikesRef.add({
+    sportsRef.add({
         Country: "Korea",
-        Sport: "Downhill Skiing", //replace with your own city?
+        Sport: "Downhill Skiing", 
         Total_medals: "21",
         Gold_medals: "11",
         Silver_medals: "5",
