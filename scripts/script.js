@@ -29,6 +29,20 @@ function videos(vid) {
 
 }   
 
+function spotlight() {
+    x = 'box-shadow'
+    y = '0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3)'
+
+    $("#video").siblings().css(x, y);
+    // $("#video").html("This is where the video would go")
+    $("#hidden_button").html("<button class='cancel' style='background :white'>Cancel</button>" )
+    
+    $('.cancel').on('click', function(){
+        $("#video").siblings().css(x, "");
+
+    })
+}
+
 
 function writesports() {
     //define a variable for the collection you want to create in Firestore to populate data

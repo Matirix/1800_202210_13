@@ -2,7 +2,7 @@
 //  Your web app's Firebase configuration
 //----------------------------------------
 var firebaseConfig = {
-    apiKey: "AIzaSyCDHLcfUmeQ4UTzQZV-_U5y-B1W8rM9J6o",
+  apiKey: "AIzaSyCDHLcfUmeQ4UTzQZV-_U5y-B1W8rM9J6o",
   authDomain: "olympix-e596b.firebaseapp.com",
   projectId: "olympix-e596b",
   storageBucket: "olympix-e596b.appspot.com",
