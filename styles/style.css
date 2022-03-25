@@ -188,6 +188,11 @@ body {
     clear: both;
 }
 
+.card {
+    background-color: #FEBF63;
+    text-align: center;
+}
+
 /* card group sizing. */
 .card-group img {
     height: 250px;
