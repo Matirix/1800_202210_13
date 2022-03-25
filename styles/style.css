@@ -117,7 +117,7 @@ html {
 .today {
     background-color: #64b8c4;
 }
-
+/* all a references have no decoration */
 a {
     text-decoration: none;
 
@@ -136,17 +136,6 @@ a {
     /* table-layout: fixed; */
 
 }
-
-/* td {
-    border: black solid 1px;
-    table-layout: fixed;
-    width: 200px;
-    height: 100px;
-}
-
-tr {
-    border: red solid 1px;
-} */
 
 #logo {
     size: 1em;
@@ -192,13 +181,6 @@ body {
     height: 250px;
 }
 
-/* Table borders w/ some light padding */
-td {
-    border: solid black 2px;
-    width: 15%;
-    padding: 2em;
-}
-
 .navhov:hover {
     text-decoration: none;
     background-color: #f1f1f1;
@@ -221,10 +203,6 @@ td {
     text-decoration: none;
 }
 
-#video {
-    width: 100%;
-
-}
 
 .icons {
     text-align: center;
@@ -258,6 +236,10 @@ footer {
 /* media query */
 @media all and (max-width: 600px) {
     #video {
+        width: 100%;
+    }
+
+    iframe {
         width: 100%;
     }
 
