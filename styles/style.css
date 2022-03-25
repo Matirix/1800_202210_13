@@ -187,47 +187,6 @@ body {
     height: 250px;
 }
 
-<<<<<<< HEAD
-=======
-/* Leaderboard Header/Image */
-.card .country_header_styling{
-    font-family: "Quicksand", sans-serif;
-    text-decoration: none;
-    width: 30rem;
-    overflow: wrap  ;
-}
-
-h2:hover{
-    background-color: lightblue;
-    border-radius: 5px;
-    transition: background-color 0.8s;
-}
-
-/* Mini flag icons for leaderboards. */
-.card #headingOne img{
-    width: 2rem;
-    border-radius: 2px;
-}
-
-.card #headingTwo img{
-    width: 2rem;
-    border-radius: 2px;
-}
-
-.card #headingThree img{
-    width: 2rem;
-    border-radius: 2px;
-}
-
-
-/* Table borders w/ some light padding */
-td {
-    border: solid black 2px;
-    width: 15%;
-    padding: 2em;
-}
-
->>>>>>> c8ba03cc41967fe62c85dc34c66cdb93e3fa40ea
 .navhov:hover {
     text-decoration: none;
     background-color: #f1f1f1;
@@ -250,14 +209,6 @@ td {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-=======
-#video {
-    height: 15px;
-    width: 15px;
-
-}
->>>>>>> c8ba03cc41967fe62c85dc34c66cdb93e3fa40ea
 
 .icons {
     text-align: center;
