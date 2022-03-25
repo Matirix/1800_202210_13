@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>My BCIT Project</title>
+  <title>OlympiX Leaderboard</title>
   <meta name="comp1800 template" content="My 1800 App">
 
   <!------------------------>
@@ -79,9 +79,13 @@
           <h5 class="mb-0">
             <!--data-toggle When button is clicked, it'll trigger collapse function. -->
             <!--data-target is specifying the element of the div so #collapseOne to help close content. -->
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne">
-              Countries/Medals
+              <!-- IMG/P tags added recently. -->
+              <img id="korea_icon" style="float:left">
+              <h2 class="country_header_styling" id="korea_header"></h2>
+              <!-- Tried to populate 'Leaderboard' dynamically. -->
+              <title id="headingOne1"></title>
             </button>
           </h5>
         </div>
@@ -89,12 +93,11 @@
         <!-- Changed span tags to have id's rather classes. -->
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-              <p> Total Medals: <span id="total"></span><span</span>
-              <p> Gold Medals: <span id="g"></span</p>
-              <p> Silver Medals: <span id="s"></span</p>
-              <p> Bronze Medals: <span id="b"></span</p>
-              <p> Bronze Medals: <span id="p"></span</p>
-            
+              <p> Total Medals: <span id="total1"></span><span</span>
+              <p> Gold Medals: <span id="g1"></span</p>
+              <p> Silver Medals: <span id="s1"></span</p>
+              <p> Bronze Medals: <span id="b1"></span</p>
+              <p> Bronze Medals: <span id="p1"></span</p>
           </div>
         </div>
       </div>
@@ -103,20 +106,20 @@
       <div class="card">
         <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
-              Countries/Medals
+              <img id="china_icon" style="float:left">
+              <h2 class="country_header_styling" id="china_header"></h2>
             </button>
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
-            <!-- <li> Countries</li>
-            <li> Germany</li>
-            <li> Norway</li>
-            <li> Sweden</li>
-            <li> Netherlands</li>
-            <li> China</li> -->
+            <p> Total Medals: <span id="total2"></span><span</span>
+              <p> Gold Medals: <span id="g2"></span</p>
+              <p> Silver Medals: <span id="s2"></span</p>
+              <p> Bronze Medals: <span id="b2"></span</p>
+              <p> Bronze Medals: <span id="p2"></span</p>
           </div>
         </div>
       </div>
@@ -125,20 +128,21 @@
       <div class="card">
         <div class="card-header" id="headingThree">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              Countries/Medals
+              <!-- specific id for icons to be populated from DB -->
+              <img id="germany_icon" style="float:left">
+              <h2 class="country_header_styling" id="germany_header"></h2>
             </button>
           </h5>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body">
-            <!-- <li> Countries</li>
-            <li> Germany</li>
-            <li> Norway</li>
-            <li> Sweden</li>
-            <li> Netherlands</li>
-            <li> China</li> -->
+              <p> Total Medals: <span id="total3"></span><span</span>
+              <p> Gold Medals: <span id="g3"></span</p>
+              <p> Silver Medals: <span id="s3"></span</p>
+              <p> Bronze Medals: <span id="b3"></span</p>
+              <p> Bronze Medals: <span id="p3"></span</p>
           </div>
         </div>
       </div>
@@ -147,29 +151,31 @@
       <div class="card">
         <div class="card-header" id="headingThree">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
-              Countries/Medals
+              <img id="canada_icon" style="float: left">
+              <h2 class="country_header_styling" id="canadian_header"></h2>
             </button>
           </h5>
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
           <div class="card-body">
-            <!-- <li> Countries</li>
-            <li> Germany</li>
-            <li> Norway</li>
-            <li> Sweden</li>
-            <li> Netherlands</li>
-            <li> China</li> -->
+              <p> Total Medals: <span id="total4"></span><span</span>
+              <p> Gold Medals: <span id="g4"></span</p>
+              <p> Silver Medals: <span id="s4"></span</p>
+              <p> Bronze Medals: <span id="b4"></span</p>
+              <p> Bronze Medals: <span id="p4"></span</p>
+          </div>
           </div>
         </div>
       </div>
     </div>
     <!-- </div> -->
   </div>
+  <!-- Main container. -->
   <div class="container">
     <h1>Current Leaderboard Placements</h1>
-
+    <!-- Secondary Container. -->
     <div class="container">
         <div id="Leaderboard-go-here" class="row row-cols-auto">
         </div>
