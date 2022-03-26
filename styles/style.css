@@ -121,13 +121,7 @@ html {
 /* all a references have no decoration */
 a {
     text-decoration: none;
-
-}
-
-#navbar_title {
-    text-align: center;
-    color: #f1f1f1;
-    padding: 10px;
+    color: black;
 
 }
 
@@ -140,6 +134,8 @@ a {
 
 #logo {
     size: 1em;
+    /* border: solid black; */
+    
 }
 
 
@@ -169,12 +165,6 @@ input[type="reset"] {
 
 h1 {
     text-align: center;
-}
-
-body {
-    min-height: 400px;
-    margin-bottom: 100px;
-    clear: both;
 }
 
 .card {
@@ -247,11 +237,17 @@ td {
     text-decoration: none;
 }
 
-
+/* for bottom navbar elements */
 .icons {
     text-align: center;
     width: 24%;
     padding-top: 25px;
+}
+
+/* for top navbar elements */
+.nav_elements {
+    width: 50%;
+    
 }
 
 .material-icons.md-18 {
@@ -269,16 +265,29 @@ td {
 .material-icons.md-48 {
     font-size: 48px;
 }
-
+/* footer */
 footer {
     position: fixed;
     height: 100px;
     bottom: 0;
     width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+/* so footer does not block the contents */
+body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+#help {
+    float:right;
 }
 
 /* media query */
-@media all and (max-width: 600px) {
+@media (max-width: 600px) {
     #video {
         width: 100%;
     }
