@@ -1,6 +1,9 @@
 //---------------------------------
 // Your own functions here
 //---------------------------------
+    // <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+
+
 function videos(vid) {
     // console.log("first in", vid)
     switch(vid) {
@@ -35,15 +38,17 @@ function spotlight() {
 
     //dims the parent divs of iframe
     $("iframe").parent().css(x, y);
+    //adds a cancel button
+    $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
+    $("#help").html("<h2 class='spotbox cancel'>Press to the watch other sports happening right now!</h2>")
 
-    
-    $("#hidden_button").html("<button class='cancel' style='background :white'>Cancel</button>" )
-    $("#instruction").html("<button class='cancel' style='background :white'>Here we go </button>" )
+    // $("#spotlight_help").html("<class='cancel'")
 
     
     $('.cancel').on('click', function(){
         $("iframe").parent().css(x, "");
         $(".cancel").hide();
+
 
     })
 }

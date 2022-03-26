@@ -144,8 +144,17 @@ a {
     border-radius: 5%;
 }
 
+/* For the spotlight odescriptions */
+.spotbox {
+    background-color: white;
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+    text-align: center;
+}
 
 
+/* Get rid of mroe decorations */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -241,7 +250,7 @@ td {
 .icons {
     text-align: center;
     width: 24%;
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 /* for top navbar elements */
@@ -265,6 +274,7 @@ td {
 .material-icons.md-48 {
     font-size: 48px;
 }
+
 /* footer */
 footer {
     position: fixed;
@@ -288,26 +298,21 @@ body {
 
 /* media query */
 @media (max-width: 600px) {
-    #video {
-        width: 100%;
+
+    li {
+        /* width: 100%; */
+        float: right;
     }
 
-    iframe {
-        width: 100%;
-    }
 
-    .video1 {
-        width: 100%;
 
-    }
-
-    td {
+    /* td {
         width: 100%;
         display: hidden;
         table-layout: auto;
 
 
-    }
+    } */
 
     .schedule {
         width: 100%;

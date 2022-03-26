@@ -33,7 +33,7 @@
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -51,14 +51,10 @@
     <!-- stuff -->
 
     <div class="container-fluid bg-light text-dark p-5" style="float: right;">
-        <div id="help">
-            <button id="spotlight_help" onclick="spotlight()" class="icons"><i
-                class="material-icons md-48 icons">help</i>
-            <p>help</p>
-        </button>
-        </div>
-        <div id="instruction"></div>
+        <div id="cancel_button"></div>
         <div class="container bg-light p-5">
+            <!-- help function -->
+            <div id="help"></div>
             <button id="first" class="sports sports_1 icons ">
                 <i class="material-icons md-48 icons"> downhill_skiing</i>
                 <p>ski</p>
@@ -78,17 +74,18 @@
 
             <hr>
             <div id="video">
+                <!-- help function -->
+                <div id="help_"></div>
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <button id="hide" onclick="spotlight()">SUPER SECRET FUNCTION</button> <span id="hidden_button"></span>
-                <div class="form-group">
-                    <label for="Comment"> <h1> Leave a comment! <span id="username">...</span></h1></label>
-                    <textarea class="form-control dim" id="description" rows="3"></textarea>
-                    <button class="btn btn-primary dim" style="float: right">Post</button>
-                </div>
-                <div id="comment_section">
+            <div class="form-group">
+                <label for="Comment"> <h1> Leave a comment! <span id="username">...</span></h1></label>
+                <textarea class="form-control dim" id="description" rows="3"></textarea>
+                <button class="btn btn-primary dim" style="float: right">Post</button>
+            </div>
+            <div id="comment_section">
 
-                </div>
+            </div>
         </div>
     </div>
     <!-- our own footer goes here-->
