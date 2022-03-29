@@ -193,7 +193,7 @@ h1 {
     width: 30rem;
     overflow: wrap  ;
 }
-
+/* h2 hover upon the leaderboard header changes color */
 h2:hover{
     background-color: lightblue;
     border-radius: 5px;
