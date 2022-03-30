@@ -106,3 +106,16 @@ html {
 .today {
     background-color: #64b8c4;
 }
+.card-body{
+    background-color:#eeedea;
+    border-color: #abc4ff;
+}
+.btn-primary{
+    background-color: #8ba0bd;
+    border-color: #8ba0bd;
+    margin: 2px;
+}
+h3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
