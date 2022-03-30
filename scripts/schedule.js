@@ -69,10 +69,10 @@ const renderCalendar = () => {
         days += `<div class="next-date">${j}</div>`;
         monthDays.innerHTML = days;
     }
-}
-else {
+  }
+  else {
     monthDays.innerHTML = days;
-}
+  }
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -84,6 +84,8 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
+document.querySelector(".days").addEventListener("click", () => {console.log("A day was clicked"); renderCalendar();});
+
 
 renderCalendar();
 
