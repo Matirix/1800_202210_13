@@ -50,7 +50,7 @@
     <!-- the body of your page goes here -->
     <!-- stuff -->
 
-    <div class="container-fluid bg-light text-dark p-5" style="float: right;">
+    <div class="container-fluid bg-light text-dark p-5" style="float: right; padding-bottom: 500px;">
         <div id="cancel_button"></div>
         <div class="container bg-light p-5">
             <!-- help function -->
@@ -79,17 +79,19 @@
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="form-group">
-                <label for="Comment"> <h1> Leave a comment! <span id="username">...</span></h1></label>
-                <textarea class="form-control dim" id="description" rows="3"></textarea>
-                <button class="btn btn-primary dim" style="float: right">Post</button>
+                <label for="Comment"> <h1> Leave a comment! <span id="name-goes-here">...</span></h1></label>
+                <textarea class="form-control dim" id="comment" rows="3" placeholder="Type your comment here..."></textarea>
+                <button class="btn btn-primary dim" style="float: right" onclick="writeComment()">Post</button>
             </div>
             <div id="comment_section">
 
             </div>
         </div>
     </div>
+    
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
+
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
@@ -97,6 +99,9 @@
     <script src="./scripts/firebaseAPI_Team13.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/comment.js"></script>
+
 
     <!-- <script src="./scripts/script.js"></script> -->
 
