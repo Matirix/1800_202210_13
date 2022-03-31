@@ -43,7 +43,7 @@ const renderCalendar = () => {
     "December",
   ];
 
-  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+  document.querySelector(".date h1").innerHTML =  months[date.getMonth()];
 
   document.querySelector(".date p").innerHTML = new Date().toDateString();
 
@@ -58,9 +58,9 @@ const renderCalendar = () => {
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<div class="today">${i}</div>`;
+      days += `<div class="today" value = "${i}">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div class ="${i}" value = "${i}">${i}</div>`;
     }
   }
 
@@ -84,7 +84,19 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-document.querySelector(".days").addEventListener("click", () => {console.log("A day was clicked"); renderCalendar();});
+document.querySelector(".days").addEventListener("click", () => {
+  var day = document.getElementsByClassName("1");
+  const month = document.getElementsByClassName("month");
+  const olympic_m = document.getElementsByTagName("h1");
+  const test = document.getElementsByTagName("h1");
+  // const test2 = document.getElementsByClassName("month").getElementsByClassName("h1")
+  // console.log(test2);
+  console.log(typeof(parseInt(day[0].className)))
+  if (olympic_m[1] == test[1]) {
+    console.log("This code works");
+  }
+
+});
 
 
 renderCalendar();
