@@ -58,9 +58,9 @@ const renderCalendar = () => {
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<div class="today" value = "${i}">${i}</div>`;
+      days += `<div class="today" id = "day" value = "${i}">${i}</div>`;
     } else {
-      days += `<div class ="${i}" value = "${i}">${i}</div>`;
+      days += `<div class ="${i}" id = "day" value = "${i}">${i}</div>`;
     }
   }
 
@@ -84,22 +84,24 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-document.querySelector(".days").addEventListener("click", () => {
-  var day = document.getElementsByClassName("1");
-  const month = document.getElementsByClassName("month");
-  const olympic_m = document.getElementsByTagName("h1");
-  const test = document.getElementsByTagName("h1");
-  // const test2 = document.getElementsByClassName("month").getElementsByClassName("h1")
-  // console.log(test2);
-  console.log(typeof(parseInt(day[0].className)))
-  if (olympic_m[1] == test[1]) {
-    console.log("This code works");
-  }
 
-});
+// document.querySelector("").addEventListener("click", () => {
+//     console.log("this worked")
+
+//   // console.log(typeof(parseInt(day[0].className)))
+//   // console.log(Number(day[0].className))
+//   // if (Number(day[0].className) == 17){
+//     // console.log("T")
+//   // }
+
+// });
 
 
 renderCalendar();
+var y = document.querySelector(".days")
+var x = document.querySelector(".prev-date")
+console.log(x)
+console.log(y)
 
 // function writesports() {
 //     //define a variable for the collection you want to create in Firestore to populate data
