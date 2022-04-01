@@ -157,6 +157,7 @@ function spotlight() {
     })
   }
 //og mine
+
 // function displayCards(collection) {
 
 //     let cardTemplate = document.getElementById("hikeCardTemplate");
@@ -188,9 +189,11 @@ function spotlight() {
 
 //         })
 // }
+
+
 //-----------------------------------------------------------------------------
 // This function is called whenever the user clicks on the "bookmark" icon.
-// It adds the hike to the "bookmarks" array
+// It adds the event to the "bookmarks" array
 // Then it will change the bookmark icon from the hollow to the solid version. 
 //-----------------------------------------------------------------------------
 function saveBookmark(eventID) {
