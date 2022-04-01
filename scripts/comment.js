@@ -28,22 +28,41 @@ function writeComment(){
     
 }
 
-function displayComment(){
-    db.collection("Comments").doc("MBy9bvhoyMKV2BfOStOo")
-    .onSnapshot(function (comment){
-        username = comment.data().Name;
-        Comm = comment.data().Comment;
-        $("#comment_section").append(`<h5> ${username}<h5> + <br> + ${comment} `);
-    })
-}
-
-// displayComment();
-// function displayComment() {
-//     db.collection("Comments").doc()
+// function displayComment(){
+//     db.collection("Comments").doc("MBy9bvhoyMKV2BfOStOo")
 //     .onSnapshot(function (comment){
 //         username = comment.data().Name;
-//         Comm = comment.data().comment;
-//         $("#comments_section").append(`<h5> ${username}<h5> + <br> + ${comment} `);
+//         Comm = comment.data().Comment;
+//         $("#comment_section").append(`<h5> ${username}<h5> + <br> + ${comment} `);
 //     })
 // }
 
+function displayCards(collection) {
+    let cardTemplate = document.getElementById("CommentTemplate");
+
+    db.collection(collection).get()
+        .then(snap => {
+            var i = 1;
+            snap.forEach(doc => { //iterate thru each doc
+                var title = doc.data().Name;   // get value of the "name" key
+                var details = doc.data().Comment;   // get value of the "details" key
+                let newcard = cardTemplate.content.cloneNode(true);
+
+                //update title and text and image
+                newcard.querySelector('.CommentName').innerHTML = title;
+                newcard.querySelector('.CommentDesc').innerHTML = details;
+                // newcard.querySelector('.card-image').src = "./images/" + collection + ".jpg"; //hikes.jpg
+
+                //give unique ids to all elements for future use
+                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+
+                //attach to gallery
+                document.getElementById(collection + "-go-here").appendChild(newcard);
+                i++;
+            })
+        })
+}
+
+displayCards("Comments");
