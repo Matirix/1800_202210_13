@@ -128,6 +128,34 @@ function populateCardsDynamically() {
 
         })
 }
+function spotlight() {
+    x = 'box-shadow'
+    y = '0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3)'
+    console.log("From spotlight")
+    //dims the parent divs of iframe in main.js
+    $("iframe").parent().css(x, y);
+    $("#leaderspotlight").parent().css(x, y);
+    $("#sched_spot").siblings().css(x, y);
+    //adds a cancel button
+    $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>")
+    $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>")
+    $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>")
+    //adds the description
+    $("#help").html("<h2 class='spotbox cancel'>Press to the watch other sports happening right now!</h2>")
+    $("#leaderspotlight").html("<h2 class='spotbox cancel'>Press one of the countries to reveal it's current place!!</h2>")
+    $("#sched_spot").html("<h2 class='spotbox cancel' style='background: white';>Scroll down to see upcoming events!</h2>")
+    $("#add_instruc").html("<h2 class='spotbox cancel' style='background: white';>Press buttons below to add to bookmarks/calender!</h2>")
+  
+    // $("#spotlight_help").html("<class='cancel'")
+  
+    $('.cancel').on('click', function () {
+      $("iframe").parent().css(x, "");
+      $(".cancel").hide();
+      // For leaderboards
+      $("#leaderspotlight").parent().css(x, "");
+      $("#sched_spot").siblings().css(x, "");
+    })
+  }
 //og mine
 // function displayCards(collection) {
 
