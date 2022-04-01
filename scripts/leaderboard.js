@@ -4,7 +4,7 @@ function writeleaders() {
 
     sportsRef.add({
         Country: "China",
-        Sport: "Downhill Skiing", //replace with your own city?
+        Sport: "Downhill Skiing", 
         Total_medals: "20",
         Gold_medals: "10",
         Silver_medals: "5",
@@ -66,12 +66,6 @@ function displayCards(collection) {
                 newcard.querySelector('.s').innerHTML = silver;
                 newcard.querySelector('.b').innerHTML = bronze;
                 newcard.querySelector('.p').innerHTML = placements;
-
-
-
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
 
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
@@ -140,11 +134,9 @@ function read_card_contents(collection) {
                 // let newcard2 = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
-                // newcard2.querySelector('.card-title').innerHTML = country + " Leaderboard Position";
                 document.getElementById("headingOne1").innerHTML = country + " Leaderboard Position";
                 i++;
             })
-
         })
 
 }
