@@ -42,7 +42,7 @@ function writeleaders() {
 }
 
 function displayCards(collection) {
-    // get the elements from HTML, store it in cardTemplate
+    // get the elements from HTML, store it in cardTemplate or of each card and populate information dynamically.
     let cardTemplate = document.getElementById("leaderboardCardTemplate");
 
     db.collection(collection).get()
@@ -82,6 +82,7 @@ displayCards("Leaderboard")
 function read_card_contents(collection) {
     // Obtain DB for Korea
     db.collection("Leaderboard").doc("j7fZWwRnI5kegtBKOijX")
+        // Within each innerHTML placeholder, we're to populate integer base values into the correct location.  
         .onSnapshot(function (KoreaDoc) {
             document.getElementById("korea_header").innerHTML = KoreaDoc.data().Country + " Leaderboard Position";
             document.getElementById("total1").innerHTML = KoreaDoc.data().Total_medals;
