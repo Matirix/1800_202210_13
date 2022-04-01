@@ -83,9 +83,15 @@
                 <textarea class="form-control dim" id="comment" rows="3" placeholder="Type your comment here..."></textarea>
                 <button class="btn btn-primary dim" style="float: right" onclick="writeComment()">Post</button>
             </div>
-            <div id="comment_section">
-
+            <button class="reveal btn btn-primary" onclick="displayCards('Comments')">Reveal comments</button>
+            <div class="comment_section">
+                <!-- <h5 class="name_goes_here">...</h5> -->
+                <!-- Here is container for cards  -->
+                <div class="container">
+                    <div id="Comments-go-here"></div>
+                </div>
             </div>
+
         </div>
     </div>
     
@@ -106,5 +112,18 @@
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
+
+<!-- Templates for general use, not displayed -->
+<template id="CommentTemplate">
+    <!-- <div class="card py-2 mx-2" style="width: 18rem;"> -->
+        <!-- <img class="card-image card-img-top" src=" ..." alt="..."> -->
+        <div class="card-body">
+            <h5 class="CommentName"></h5>
+            <p class="CommentDesc">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a class="btn btn-primary card-href" style="float:right">Reply</a>
+        <!-- </div> -->
+        </div>
+</template>
 
 </html>
