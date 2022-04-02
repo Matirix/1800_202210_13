@@ -28,17 +28,9 @@ function writeComment(){
     
 }
 
-// function displayComment(){
-//     db.collection("Comments").doc("MBy9bvhoyMKV2BfOStOo")
-//     .onSnapshot(function (comment){
-//         username = comment.data().Name;
-//         Comm = comment.data().Comment;
-//         $("#comment_section").append(`<h5> ${username}<h5> + <br> + ${comment} `);
-//     })
-// }
-
 function displayCards(collection) {
     let cardTemplate = document.getElementById("CommentTemplate");
+
 
     db.collection(collection).get()
         .then(snap => {

@@ -2,15 +2,7 @@
  * customize material design icon sizes 
  *-------------------------------------
  */
-/* why isn't it linking properly */
-/* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Quicksand", sans-serif;
-      } */
 
-/* all a references have no decoration */
 a {
     text-decoration: none;
     color: black;
@@ -23,7 +15,10 @@ a {
     /* table-layout: fixed; */
 
 }
-
+.btn-primary {
+    background-color: #ff8b3d;
+    border: none;
+}
 #logo {
     size: 1em;
     /* border: solid black; */
@@ -63,7 +58,8 @@ a {
 .reveal {
     width: 100%;
     border-radius: 10px;
-    padding: 10px
+    padding: 10px;
+    /* background-color: #B30000; */
 }
 /* Get rid of mroe decorations */
 button,
@@ -88,8 +84,10 @@ h1 {
 }
 
 .card {
-    background-color: #2FA4FF;
+    background-color: #ff8b3d;
+    border-radius: 10px;
     text-align: center;
+    border: none;
 }
 
 /* card group sizing. */
@@ -99,7 +97,7 @@ h1 {
 
 /* Leaderboard Header/Image */
 .card .country_header_styling{
-    font-family: "Quicksand", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     width: 30rem;
     overflow: wrap  ;
@@ -143,7 +141,7 @@ td {
 
 .title {
     text-align: center;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 .buttons {
@@ -162,6 +160,7 @@ td {
     text-align: center;
     width: 24%;
     padding-top: 15px;
+
 }
 
 /* for top navbar elements */
@@ -194,6 +193,7 @@ footer {
     width: 100%;
     opacity: 1;
     background-color: rgba(0,0,0,0.1);
+    /* background-color: ; */
     border-radius: 10px;
 }
 /* so footer does not block the contents */

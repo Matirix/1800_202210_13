@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged(user => {
         console.log("No user is signed in");
     }
 });
+//gets the bookmarks
 function getBookmarks(user) {
     db.collection("users").doc(user.uid).get()
         .then(userDoc => {
