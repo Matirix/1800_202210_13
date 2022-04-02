@@ -4,7 +4,7 @@ function writeleaders() {
 
     sportsRef.add({
         Country: "China",
-        Sport: "Downhill Skiing", //replace with your own city?
+        Sport: "Downhill Skiing", 
         Total_medals: "20",
         Gold_medals: "10",
         Silver_medals: "5",
@@ -42,7 +42,7 @@ function writeleaders() {
 }
 
 function displayCards(collection) {
-    // get the elements from HTML, store it in cardTemplate
+    // get the elements from HTML, store it in cardTemplate or of each card and populate information dynamically.
     let cardTemplate = document.getElementById("leaderboardCardTemplate");
 
     db.collection(collection).get()
@@ -67,12 +67,6 @@ function displayCards(collection) {
                 newcard.querySelector('.b').innerHTML = bronze;
                 newcard.querySelector('.p').innerHTML = placements;
 
-
-
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
                 i++;
@@ -88,6 +82,7 @@ displayCards("Leaderboard")
 function read_card_contents(collection) {
     // Obtain DB for Korea
     db.collection("Leaderboard").doc("j7fZWwRnI5kegtBKOijX")
+        // Within each innerHTML placeholder, we're to populate integer base values into the correct location.  
         .onSnapshot(function (KoreaDoc) {
             document.getElementById("korea_header").innerHTML = KoreaDoc.data().Country + " Leaderboard Position";
             document.getElementById("total1").innerHTML = KoreaDoc.data().Total_medals;
@@ -140,11 +135,9 @@ function read_card_contents(collection) {
                 // let newcard2 = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
-                // newcard2.querySelector('.card-title').innerHTML = country + " Leaderboard Position";
                 document.getElementById("headingOne1").innerHTML = country + " Leaderboard Position";
                 i++;
             })
-
         })
 
 }

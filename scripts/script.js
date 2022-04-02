@@ -172,6 +172,61 @@ function displayCards(collection) {
         })
 }
 
+//og mine
+
+// function displayCards(collection) {
+
+//     let cardTemplate = document.getElementById("hikeCardTemplate");
+
+//     db.collection(collection).get()
+//         .then(snap => {
+//             var i = 1;
+//             snap.forEach(doc => { //iterate thru each doc
+//                 var date = doc.data().Date; // get value of the "name" key
+//                 var sport = doc.data().Sport;
+//                 var detail = doc.data().details;
+//                 var eventID = doc.data().id;
+//                 let newcard = cardTemplate.content.cloneNode(true);
+//                 newcard.querySelector('.card-title').innerHTML = sport + " taking place on " + date;
+//                 newcard.querySelector('.card-location').innerHTML = date;
+//                 newcard.querySelector('.difficulty').innerHTML = sport;
+//                 newcard.querySelector('.length').innerHTML = detail;
+//                 newcard.querySelector('.card-image').src = "./images/" + sport + ".jpeg"; //hikes.jpg
+//                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+//                 // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+//                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+//                 newcard.querySelector('i').id = 'save-' + eventID;
+//                 newcard.querySelector('i').onclick = () => saveBookmark(eventID);
+
+//                 //attach to gallery
+//                 document.getElementById(collection + "-go-here").appendChild(newcard);
+//                 i++;
+//             })
+
+//         })
+// }
+
+
+//-----------------------------------------------------------------------------
+// This function is called whenever the user clicks on the "bookmark" icon.
+// It adds the event to the "bookmarks" array
+// Then it will change the bookmark icon from the hollow to the solid version. 
+//-----------------------------------------------------------------------------
+function saveBookmark(eventID) {
+    currentUser.set({
+            bookmarks: firebase.firestore.FieldValue.arrayUnion(eventID)
+        }, {
+            merge: true
+        })
+        .then(function () {
+            console.log("bookmark has been saved for: " + currentUser);
+            var iconID = 'save-' + eventID;
+            //console.log(iconID);
+            document.getElementById(iconID).innerText = 'bookmark';
+        });
+}
+
+
 
 function setup() {
     $(".sports").click(function (){
