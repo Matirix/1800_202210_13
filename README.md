@@ -5,7 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+This browser based web application to create a centralized hub for online streaming the olympics and related events like leaderboard
+and schedule
 	
 ## Technologies
 Technologies used for this project:
@@ -44,6 +45,9 @@ It has the following subfolders and files:
 ├── styles                   # Folder for styles
     /style.css
     /schedule.css                 
+├── text                   # Folder for styles
+    /footer.html
+    /nav.html
 
 Firebase hosting files: 
 ├── .firebaserc...
