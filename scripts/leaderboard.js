@@ -90,7 +90,7 @@ function read_card_contents(collection) {
             document.getElementById("s1").innerHTML = KoreaDoc.data().Silver_medals;
             document.getElementById("b1").innerHTML = KoreaDoc.data().Bronze_medals;
             document.getElementById("p1").innerHTML = KoreaDoc.data().placement;
-            document.getElementById("korea_icon").src = "./images/" + "Korea" + ".png";
+            document.getElementById("korea_icon").src = "../images/" + "Korea" + ".png";
         })
     // Obtain DB information for China
     db.collection("Leaderboard").doc("hpQwJYTni94UxqH6Hrvi")
@@ -101,13 +101,13 @@ function read_card_contents(collection) {
             document.getElementById("s2").innerHTML = ChinaDoc.data().Silver_medals;
             document.getElementById("b2").innerHTML = ChinaDoc.data().Bronze_medals;
             document.getElementById("p2").innerHTML = ChinaDoc.data().placement;
-            document.getElementById("china_icon").src = "./images/" + "China" + ".png";
+            document.getElementById("china_icon").src = "../images/" + "China" + ".png";
         })
     // Obtain DB information for Germany
     db.collection("Leaderboard").doc("ImMcKI5Gw0hkCfHNOEiQ")
         .onSnapshot(function (GermanyDoc) {
             document.getElementById("germany_header").innerHTML = GermanyDoc.data().Country + " Leaderboard Position";
-            document.getElementById("germany_icon").src = "./images/" + "Germany" + ".png";
+            document.getElementById("germany_icon").src = "../images/" + "Germany" + ".png";
             document.getElementById("total3").innerHTML = GermanyDoc.data().Total_medals;
             document.getElementById("g3").innerHTML = GermanyDoc.data().Gold_medals;
             document.getElementById("s3").innerHTML = GermanyDoc.data().Silver_medals;
@@ -117,7 +117,7 @@ function read_card_contents(collection) {
     db.collection("Leaderboard").doc("CylGW1uC7PF51DIHIYVW")
         .onSnapshot(function (CanadaDoc) {
             document.getElementById("canadian_header").innerHTML = CanadaDoc.data().Country + " Leaderboard Position";
-            document.getElementById("canada_icon").src = "./images/" + "Canada" + ".png";
+            document.getElementById("canada_icon").src = "../images/" + "Canada" + ".png";
             document.getElementById("total4").innerHTML = CanadaDoc.data().Total_medals;
             document.getElementById("g4").innerHTML = CanadaDoc.data().Gold_medals;
             document.getElementById("s4").innerHTML = CanadaDoc.data().Silver_medals;

@@ -159,7 +159,7 @@ function displayCards(collection) {
                 newcard.querySelector('.card-location').innerHTML = date;
                 newcard.querySelector('.difficulty').innerHTML = sport;
                 newcard.querySelector('.length').innerHTML = detail;
-                newcard.querySelector('.card-image').src = "./images/" + sport + ".jpeg"; //hikes.jpg
+                newcard.querySelector('.card-image').src = "../images/" + sport + ".jpeg"; //hikes.jpg
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
                 // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);

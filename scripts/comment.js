@@ -30,7 +30,7 @@ function writeComment(){
 
 function displayCards(collection) {
     let cardTemplate = document.getElementById("CommentTemplate");
-
+    $(this).empty();
 
     db.collection(collection).get()
         .then(snap => {

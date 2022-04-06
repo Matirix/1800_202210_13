@@ -28,14 +28,14 @@ function getBookmarks(user) {
                         newCard.querySelector('.card-title').innerHTML = sport;
                         newCard.querySelector('.card-length').innerHTML = date;
                         newCard.querySelector('.card-text').innerHTML = detail;
-                        newCard.querySelector('img').src = `./images/${sport}.jpeg`;
+                        newCard.querySelector('img').src = `../images/${sport}.jpeg`;
                         hikeCardGroup.appendChild(newCard);
                     } else {
                         console.log("Query has more than one data")
                     }
 
                 })
-
+                                
             });
         })
 }
