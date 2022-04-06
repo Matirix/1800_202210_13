@@ -84,55 +84,19 @@
       </div>
     <hr>
 
-    <!-- <div class="container-fluid bg-light text-dark p-5">
-        <div class="container bg-light p-5">
-            <h6 style="background-color:aqua"> Row 1 </h6>
-            <div class="card-group">
-                <div class="card">
-                    <span> Event 1 Span </span>
-                    <img src="./images/downhill.jpeg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 1</h5>
-                        <p class="card-text"> Current Event One! </p>
-                        <p class="card-text"><small class="text-muted">Last updated 100000 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <span> Event 2 Span </span>
-                    <img src="./images/figuerskating.jpeg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 2 </h5>
-                        <p class="card-text"> Welcome to The Grand Alyorian Academy </p>
-                        <p class="card-text"><small class="text-muted">Last updated 25 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <span> Event 3 Span </span>
-                    <img src="./images/snowboard1.jpeg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 3</h5>
-                        <p class="card-text"> Something's going on here! 
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            <hr>
-        </div>
-    </div> -->
-
     <div class="container">
         <h1>Upcoming Events</h1>
         <div id="add_instruc"></div>
 
         <h3>The 2024 Winter Olympics : Feb 1 - Feb 28 </h3>
 
-        <div class="container">
-            <div id="upcoming_events-go-here" class="row row-cols-auto">
+        <div class="container" style="overflow: hidden;">
+            <div id="upcoming_events-go-here" class="row row-cols-auto" >
             </div>
         </div>
     </div>
 
-    <template id="hikeCardTemplate" >
+    <template id="hikeCardTemplate" style="overflow: hidden;">
         <div class="card py-2 mx-2" style="width: 30%; overflow: hidden; background-color:#e6e5e1;">
             <img class="card-image card-img-top" src=" ..." alt="..." style="border: 1px solid #a9927d; height: 100%;">
             <div class="card-body">
@@ -141,9 +105,9 @@
                 <p>Sport: <span class="card-location"></span><span>,</span><span class="province"></span></p>
                 <p>Date: <span class="difficulty"></span> </p>
                 <p>Detail: <span class="length"></span></p>
-                <a class="btn btn-primary card-href">Watch Stream</a>
-                <a class="btn btn-primary card-href">Add to Calender</a>
+                <a href="main.html" class="btn btn-primary card-href">Watch Stream</a><br>
                 <i class="material-icons" style="cursor: pointer;">bookmark_border</i>
+                
             </div>
         </div>
     </template>
@@ -155,6 +119,9 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>

@@ -16,9 +16,21 @@ a {
 
 }
 .btn-primary {
-    background-color: #ff8b3d;
+    background-color: #3a7ca5;
     border: none;
+    
 }
+/* changes all button colors*/
+.btn-primary:hover {
+    background-color: #2f6690;
+}
+/* changes all hover  */
+.icons:hover {
+    background-color: #2f6690;
+    border-radius: 10px;
+}
+
+
 #logo {
     size: 1em;
     /* border: solid black; */
@@ -61,7 +73,7 @@ a {
     padding: 10px;
     /* background-color: #B30000; */
 }
-/* Get rid of mroe decorations */
+/* Get rid of more decorations */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -74,6 +86,13 @@ input[type="reset"] {
     outline: inherit;
 }
 
+/* remove the a:href blue hobver */
+a:hover {
+    color: inherit;
+
+}
+
+
 #side {
     width: 5%;
 }
@@ -84,7 +103,7 @@ h1 {
 }
 
 .card {
-    background-color: #ff8b3d;
+    background-color: #b6ccfe;
     border-radius: 10px;
     text-align: center;
     border: none;
@@ -139,6 +158,14 @@ td {
     border-radius: 10%;
 }
 
+/* .navbar {
+    background-color: #d7e3fc;
+}
+
+.container {
+    background-color: #d7e3fc;
+} */
+
 .title {
     text-align: center;
     /* background-color: #f1f1f1; */
@@ -162,6 +189,12 @@ td {
     padding-top: 15px;
 
 }
+
+.icons:hover {
+    color: #f1f1f1;
+}
+
+
 
 /* for top navbar elements */
 .nav_elements {
@@ -192,7 +225,7 @@ footer {
     bottom: 0;
     width: 100%;
     opacity: 1;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #d7e3fc;
     /* background-color: ; */
     border-radius: 10px;
 }
@@ -201,6 +234,7 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
+
 }
 
 #help {
