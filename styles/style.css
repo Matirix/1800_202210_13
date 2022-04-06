@@ -267,3 +267,13 @@ body {
     }
 
 }
+
+/* Bullet point removal and rounded card edges */
+li {
+    list-style-type: none;
+  }
+
+.card {
+border-radius: 20px;
+text-align: left;  
+}

@@ -29,7 +29,6 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-  <!-- We require ln33 for the buttons to drop down and collapse. -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
   <!-------------------------------------------->
@@ -39,19 +38,6 @@
 
   <!-- Style sheet -->
   <link rel="stylesheet" href="./styles/style.css">
-  <!-- Not of best practice, but implemented none-type bullet pts.-->
-  <style>
-    li {
-      list-style-type: none;
-    }
-
-    /* Curved edges. */
-    .card {
-      border-radius: 20px;
-      text-align: left;
-
-    }
-  </style>
 
 </head>
 
@@ -74,14 +60,12 @@
     <div class="container bg-light p-5">
       <h1 class="display-4 title">Leaderboards</h1>
       <hr>
-    <!-- <div class="buttons"> -->
+      <!-- Expand/Collapse feature -->
       <div id="accordion">
         <!-- Card 1 -->
         <div class="card">
           <div class="card-header" id="headingOne">
             <h5 class="mb-0">
-              <!--data-toggle When button is clicked, it'll trigger collapse function. -->
-              <!--data-target is specifying the element of the div so #collapseOne to help close content. -->
               <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                 aria-controls="collapseOne">
                 <!-- IMG/P tags added recently. -->
@@ -92,8 +76,6 @@
               </button>
             </h5>
           </div>
-
-          <!-- Changed span tags to have id's rather classes. -->
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
                 <p> Total Medals: <span id="total1"></span><span</span>
@@ -174,19 +156,7 @@
         </div>
       </div>
     </div>
-
-    <!-- </div> -->
   </div>
-  <!-- Removed these card placeholders. -->
-  <!-- Main container. -->
-  <!-- Secondary Container. -->
-  <!-- <div class="container">
-    <h1>Current Leaderboard Placements</h1>
-    <div class="container">
-        <div id="Leaderboard-go-here" class="row row-cols-auto">
-        </div>
-    </div>
-</div> -->
 
   <template id="leaderboardCardTemplate">
     <div class="card py-2 mx-2" style="width: 18rem;">
@@ -203,16 +173,6 @@
         </div>
     </div>
 </template>
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- our own footer goes here-->
