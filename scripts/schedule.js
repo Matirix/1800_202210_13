@@ -83,19 +83,6 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-
-// document.querySelector("").addEventListener("click", () => {
-//     console.log("this worked")
-
-//   // console.log(typeof(parseInt(day[0].className)))
-//   // console.log(Number(day[0].className))
-//   // if (Number(day[0].className) == 17){
-//     // console.log("T")
-//   // }
-
-// });
-
-
 renderCalendar();
 
 

@@ -1,7 +1,6 @@
 //---------------------------------
 // Main page Primary Functions
 //---------------------------------
-
 // For the purpose of checking/showing logged in user.
 
 
@@ -35,10 +34,8 @@ insertName();
 
 // This is for the switch video functionality
 function videos(vid) {
-    // console.log("first in", vid)
     switch(vid) {
-        case 'first': //id
-            //jQuery won't work under these ones
+        case 'first': 
             //Access the collection called frontvideo, then look for the doc sports1. callback function
             db.collection("frontvideo").doc("sports1").onSnapshot(function(video_1) {
                 document.getElementById("video").innerHTML=video_1.data().video})
@@ -103,11 +100,6 @@ function spotlight() {
         $("#leaderspotlight").parent().css(x,"");
         //for schedule
         $("#sched_spot").siblings().css(x,"");
-
-
-
-
-
     })
 
 }
@@ -150,8 +142,8 @@ function displayCards(collection) {
     db.collection(collection).get()
         .then(snap => {
             var i = 1;
-            snap.forEach(doc => { //iterate thru each doc
-                var date = doc.data().Date;   // get value of the "name" key
+            snap.forEach(doc => { 
+                var date = doc.data().Date;
                 var eventID = doc.data().id;
                 var sport = doc.data().Sport;
                 var detail = doc.data().details;
@@ -160,7 +152,7 @@ function displayCards(collection) {
                 newcard.querySelector('.card-location').innerHTML = date;
                 newcard.querySelector('.difficulty').innerHTML = sport;
                 newcard.querySelector('.length').innerHTML = detail;
-                newcard.querySelector('.card-image').src = "../images/" + sport + ".jpeg"; //hikes.jpg
+                newcard.querySelector('.card-image').src = "../images/" + sport + ".jpeg"; 
                 newcard.querySelector('i').id = 'save-' + eventID;  
                 newcard.querySelector('i').onclick = () => saveBookmark(eventID);
 
