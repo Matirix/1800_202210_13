@@ -1,6 +1,5 @@
 store_global_data = db.collection
 function writeleaders() {
-    //define a variable for the collection you want to create in Firestore to populate data
     var sportsRef = db.collection("Leaderboard");
 
     sportsRef.add({
@@ -43,13 +42,12 @@ function writeleaders() {
 }
 
 function displayCards(collection) {
-    // get the elements from HTML, store it in cardTemplate or of each card and populate information dynamically.
     let cardTemplate = document.getElementById("leaderboardCardTemplate");
 
     db.collection(collection).get()
         .then(snap => {
             var i = 1;
-            snap.forEach(doc => { //iterate thru each doc
+            snap.forEach(doc => {
                 var country = doc.data().Country;  
                 var total_m = doc.data().Total_medals;
                 var gold = doc.data().Gold_medals;
@@ -58,7 +56,6 @@ function displayCards(collection) {
                 var placements = doc.data().placement;
                 let newcard = cardTemplate.content.cloneNode(true);
 
-                //update title and text and image
                 newcard.querySelector('.card-title').innerHTML =  country + " Leaderboard Position";
                 newcard.querySelector('.card-attend').innerHTML = country;
                 newcard.querySelector('.card-image').src = "./images/" + country + ".png"; 
@@ -74,7 +71,6 @@ function displayCards(collection) {
         })
 }
 displayCards("Leaderboard")
-
 
 // Read the database and populate data over id tags.
 function read_card_contents(collection) {
