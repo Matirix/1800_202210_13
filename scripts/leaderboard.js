@@ -1,3 +1,4 @@
+store_global_data = db.collection
 function writeleaders() {
     //define a variable for the collection you want to create in Firestore to populate data
     var sportsRef = db.collection("Leaderboard");
@@ -67,8 +68,6 @@ function displayCards(collection) {
                 newcard.querySelector('.b').innerHTML = bronze;
                 newcard.querySelector('.p').innerHTML = placements;
 
-                //attach to gallery
-                document.getElementById(collection + "-go-here").appendChild(newcard);
                 i++;
             })
 
@@ -139,6 +138,6 @@ function read_card_contents(collection) {
                 i++;
             })
         })
-
 }
-read_card_contents();
+
+read_card_contents(toString(store_global_data));
