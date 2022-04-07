@@ -2,12 +2,18 @@
  * customize material design icon sizes 
  *-------------------------------------
  */
-
+/* removing text decorations */
 a {
     text-decoration: none;
     color: black;
 
 }
+
+/* Bullet point removal and rounded card edges */
+li {
+    list-style-type: none;
+  }
+
 
 .schedule {
     width: 100%;
@@ -118,9 +124,12 @@ h1 {
 .card .country_header_styling{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    width: 30rem;
-    overflow: wrap  ;
+    /* width: 30rem; */
+    overflow: wrap ;
+
 }
+
+
 /* h2 hover upon the leaderboard header changes color */
 h2:hover{
     background-color: lightblue;
@@ -221,7 +230,7 @@ td {
 /* footer */
 footer {
     position: fixed;
-    height: 100px;
+    height: 75px;
     bottom: 0;
     width: 100%;
     opacity: 1;
@@ -249,6 +258,20 @@ body {
         float: right;
     }
 
+    .nav {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .nav_elements {
+        width: 100%;
+        text-align: center;
+
+    }
+    .d-flex {
+        display: none;
+    }
 
 
     /* td {
@@ -266,14 +289,4 @@ body {
 
     }
 
-}
-
-/* Bullet point removal and rounded card edges */
-li {
-    list-style-type: none;
-  }
-
-.card {
-border-radius: 20px;
-text-align: left;  
 }
