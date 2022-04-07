@@ -20,12 +20,24 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
+├── .firebaserc
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── firebase.json
+├── firebase.indexes.json
+├── firestore.rules
 └── README.md                   
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
+├── html                     # Folder for html
+    /index.html              # landing HTML file, this is what users see when you come to url
+    /404.html
+    /bookmarks.html
+    /leaderboard.html
+    /login.html
+    /main.html
+    /schedule.html
+    /template.html 
 ├── images                   # Folder for images
     /Downhill ski.jpeg
     /Figure Skating.jpeg
