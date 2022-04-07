@@ -11,9 +11,6 @@ a {
 
 .schedule {
     width: 100%;
-    /* border: black solid 0.5cm; */
-    /* table-layout: fixed; */
-
 }
 .btn-primary {
     background-color: #3a7ca5;
@@ -30,13 +27,9 @@ a {
     border-radius: 10px;
 }
 
-
 #logo {
-    size: 1em;
-    /* border: solid black; */
-    
+    size: 1em; 
 }
-
 
 /* For the comment section */
 #description {
@@ -71,7 +64,6 @@ a {
     width: 100%;
     border-radius: 10px;
     padding: 10px;
-    /* background-color: #B30000; */
 }
 /* Get rid of more decorations */
 button,
@@ -91,7 +83,6 @@ a:hover {
     color: inherit;
 
 }
-
 
 #side {
     width: 5%;
@@ -158,14 +149,6 @@ td {
     border-radius: 10%;
 }
 
-/* .navbar {
-    background-color: #d7e3fc;
-}
-
-.container {
-    background-color: #d7e3fc;
-} */
-
 .title {
     text-align: center;
     /* background-color: #f1f1f1; */
@@ -193,8 +176,6 @@ td {
 .icons:hover {
     color: #f1f1f1;
 }
-
-
 
 /* for top navbar elements */
 .nav_elements {
@@ -226,10 +207,9 @@ footer {
     width: 100%;
     opacity: 1;
     background-color: #d7e3fc;
-    /* background-color: ; */
     border-radius: 10px;
 }
-/* so footer does not block the contents */
+/* Aid footer to not block the contents */
 body {
     min-height: 400px;
     margin-bottom: 100px;
@@ -245,20 +225,8 @@ body {
 @media (max-width: 600px) {
 
     li {
-        /* width: 100%; */
         float: right;
     }
-
-
-
-    /* td {
-        width: 100%;
-        display: hidden;
-        table-layout: auto;
-
-
-    } */
-
     .schedule {
         width: 100%;
         table-layout: auto;
