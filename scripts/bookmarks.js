@@ -30,6 +30,7 @@ function getBookmarks(user) {
                         newCard.querySelector('.card-text').innerHTML = detail;
                         newCard.querySelector('img').src = `../images/${sport}.jpeg`;
                         hikeCardGroup.appendChild(newCard);
+                        console.log("Testing if this is working")
                     } else {
                         console.log("Query has more than one data")
                     }

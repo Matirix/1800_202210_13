@@ -152,6 +152,7 @@ function displayCards(collection) {
             var i = 1;
             snap.forEach(doc => { //iterate thru each doc
                 var date = doc.data().Date;   // get value of the "name" key
+                var eventID = doc.data().id;
                 var sport = doc.data().Sport;
                 var detail = doc.data().details;
                 let newcard = cardTemplate.content.cloneNode(true);
@@ -160,51 +161,15 @@ function displayCards(collection) {
                 newcard.querySelector('.difficulty').innerHTML = sport;
                 newcard.querySelector('.length').innerHTML = detail;
                 newcard.querySelector('.card-image').src = "../images/" + sport + ".jpeg"; //hikes.jpg
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+                newcard.querySelector('i').id = 'save-' + eventID;  
+                newcard.querySelector('i').onclick = () => saveBookmark(eventID);
 
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
                 i++;
             })
-
         })
 }
-
-//og mine
-
-// function displayCards(collection) {
-
-//     let cardTemplate = document.getElementById("hikeCardTemplate");
-
-//     db.collection(collection).get()
-//         .then(snap => {
-//             var i = 1;
-//             snap.forEach(doc => { //iterate thru each doc
-//                 var date = doc.data().Date; // get value of the "name" key
-//                 var sport = doc.data().Sport;
-//                 var detail = doc.data().details;
-//                 var eventID = doc.data().id;
-//                 let newcard = cardTemplate.content.cloneNode(true);
-//                 newcard.querySelector('.card-title').innerHTML = sport + " taking place on " + date;
-//                 newcard.querySelector('.card-location').innerHTML = date;
-//                 newcard.querySelector('.difficulty').innerHTML = sport;
-//                 newcard.querySelector('.length').innerHTML = detail;
-//                 newcard.querySelector('.card-image').src = "./images/" + sport + ".jpeg"; //hikes.jpg
-//                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-//                 // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-//                 // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-//                 newcard.querySelector('i').id = 'save-' + eventID;
-//                 newcard.querySelector('i').onclick = () => saveBookmark(eventID);
-
-//                 //attach to gallery
-//                 document.getElementById(collection + "-go-here").appendChild(newcard);
-//                 i++;
-//             })
-
-//         })
-// }
 
 
 //-----------------------------------------------------------------------------
@@ -221,6 +186,7 @@ function saveBookmark(eventID) {
         .then(function () {
             console.log("bookmark has been saved for: " + currentUser);
             var iconID = 'save-' + eventID;
+            console.log(iconID)
             //console.log(iconID);
             document.getElementById(iconID).innerText = 'bookmark';
         });
