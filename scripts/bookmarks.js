@@ -21,7 +21,7 @@ function getBookmarks(user) {
                     
                     if (size == 1) {
                         var doc = queryData[0].data();
-                        var date = doc.Date; // get value of the "name" key
+                        var date = doc.Date;
                         var sport = doc.Sport;
                         var detail = doc.details;
                         let newCard = CardTemplate.content.cloneNode(true);
