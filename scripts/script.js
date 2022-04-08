@@ -85,7 +85,7 @@ function spotlight() {
     $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
     $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
 
-    //main -> leaderboard (x2) -> schedule
+    //main -> leaderboard (x2) -> schedule -> bookmarks
     //adds the description
     $("#help").html("<h2 class='spotbox cancel'>Press to the watch other sports happening right now!</h2>")
     $("#leaderspotlight").html("<h2 class='spotbox cancel'>Press one of the countries to reveal it's current place!!</h2>")
