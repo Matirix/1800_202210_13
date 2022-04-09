@@ -66,28 +66,32 @@ function spotlight() {
     console.log("From spotlight")
 
     //dims the parent divs of iframe in main.js
-    
     //main.html
     $("iframe").parent().css(x, y);
     //leaderboard.html
     $("#leaderspotlight").parent().css(x,y);
     //schedule.html
     $("#sched_spot").siblings().css(x,y);
+    //bookmarks.html
+    $("#bookmark_instruc").siblings().css(x,y);
+
 
 
     //adds a cancel button
 
-    //main -> leaderboard -> schedule
+    //main -> leaderboard -> schedule -> bookmarks
+    $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
     $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
     $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
     $("#cancel_button").html("<button class='cancel' style='float: right; color: white'; width: 100%;>  <i class='material-icons md-48'> cancel </i>  </button>" )
 
-    //main -> leaderboard (x2) -> schedule
+    //main -> leaderboard (x2) -> schedule -> bookmarks
     //adds the description
     $("#help").html("<h2 class='spotbox cancel'>Press to the watch other sports happening right now!</h2>")
     $("#leaderspotlight").html("<h2 class='spotbox cancel'>Press one of the countries to reveal it's current place!!</h2>")
     $("#sched_spot").html("<h2 class='spotbox cancel' style='background: white';>Scroll down to see upcoming events!</h2>")
     $("#add_instruc").html("<h2 class='spotbox cancel' style='background: white';>Press buttons below to add to bookmarks/calender!</h2>")
+    $("#bookmark_instruc").html("<h2 class='spotbox cancel' style='background: white';>Below are your bookmarked events!</h2>")
 
 
     //The elements generated would also generate the class .cancel
@@ -100,6 +104,9 @@ function spotlight() {
         $("#leaderspotlight").parent().css(x,"");
         //for schedule
         $("#sched_spot").siblings().css(x,"");
+        //for bookmark
+        $("#bookmarks").siblings().css(x,"");
+
     })
 
 }
