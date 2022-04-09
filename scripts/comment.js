@@ -1,3 +1,4 @@
+// implementing the comment function 
 function writeComment(){
     console.log("I'm in")
     let comment = $("#comment").val();
@@ -21,7 +22,7 @@ function writeComment(){
         }
     });
 }
-
+//populating the comment sectoin according to the "Comments" collection
 function displayCards(collection) {
     let cardTemplate = document.getElementById("CommentTemplate");
     db.collection(collection).get()
